@@ -2,6 +2,9 @@ import _ from "lodash";
 import printMe from "./print";
 
 function component() {
+  if (process.env.NODE.ENV !== "production") {
+    console.log("Looks like we are in development mode!");
+  }
   const element = document.createElement("div");
   const btn = document.createElement("button");
 
